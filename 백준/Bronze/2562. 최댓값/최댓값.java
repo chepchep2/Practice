@@ -1,24 +1,25 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
+
 
 public class Main {
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        int arr[] = new int[9];
-        int max = 0;
-        int cnt = 0;
+//        int N = sc.nextInt();
+        int[] arr = new int[9];
+        int max = arr[0];
+        int maxIndex = 0;
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
-            if (max < arr[i]) {
+
+
+            if (arr[i] > max) {
                 max = arr[i];
-                cnt = i + 1;
+                maxIndex = i + 1;
             }
         }
         System.out.println(max);
-        System.out.println(cnt);
-
+        System.out.println(maxIndex);
     }
 }
-
